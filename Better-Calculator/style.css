@@ -1,0 +1,133 @@
+@font-face {
+    font-family: 'DSEG7';
+    src: url('fonts/dseg7-classic-latin-400-normal.woff2') format('woff2');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+    letter-spacing: 0.12rem;
+    margin-bottom: 10rem;
+    border-radius: 1rem;
+    box-shadow: 1px 1px 20px rgb(75, 75, 192),
+    -1px -1px 20px rgb(51, 9, 204),
+    inset 1px 1px 5px rgb(75, 75, 192),
+    inset -1px -1px 5px rgb(51, 9, 204);
+}
+
+
+.calculator {
+    width: 80vw;
+    max-width: 300px;
+    height: 47.5vh;
+    max-height: 400px;
+    background-color: #121a1b;
+    border-radius: 10px;
+    box-shadow: 1px 5px 20px rgb(75, 75, 192),
+    -1px -5px 20px blue;
+}
+
+.display {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.display input {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 1px 2px 10px rgba(0,0,0,0.8),
+    -1px -2px 10px rgba(0,0,0,0.8);
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-family: 'DSEG7';
+    padding: 10px;
+    text-align: right;
+    font-size: 1.2rem;
+    cursor: auto;
+}
+
+.buttons {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.row {
+    height: 15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.row button {
+    width: 18%;
+    height: 80%;
+    border-radius: 10px;
+    box-shadow: 1px 2px 10px rgba(0,0,0,0.8),
+    -1px -2px 10px rgba(0,0,0,0.8);
+    background: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: medium;
+    transition: all 0.1s ease;
+}
+
+.row button:hover {
+    box-shadow: 1px 2px 10px rgba(0,0,0,0.8),
+    -1px -2px 10px rgba(0,0,0,0.8),
+    inset 1px 2px 10px rgba(0,0,0,0.8);
+    font-size: small;
+    color: rgba(255,255,255,0.506);
+    font-weight: 555;
+}
+
+.row1 button {
+    color: aquamarine;
+}
+
+.row1 button:hover {
+    color: rgba(127, 255, 212, 0.322);
+}
+
+#equal {
+    width: 40%;
+    color: aquamarine;
+}
+
+#equal:hover {
+    color: rgba(127, 255, 212, 0.322);
+}

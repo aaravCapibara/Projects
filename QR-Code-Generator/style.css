@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #262a2f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+h2 {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #1a1a1a;
+    color: #cf0c3d;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 10rem;
+    padding: 1rem 6rem 1rem 6rem;
+    border-radius: 50rem;
+    transition: all 1s ease;
+    transition: all 0.4s ease;
+    opacity: 1;
+    visibility: visible;
+    white-space: nowrap;
+}
+
+.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container {
+    width: 400px;
+    padding: 25px 35px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.container p {
+    font-weight: 600;
+    font-size: 17.5px;
+    margin-bottom: 8px;
+}
+
+.container input {
+    height: 50px;
+    width: 100%;
+    border: 3px solid #666;
+    font-size: 1.05rem;
+    font-weight: 600;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.1s ease;
+}
+
+.container input:focus {
+    border: 3px solid #494eea;
+}
+
+.container input::selection {
+    color: #1a1a1a;
+    background-color: #494eea;
+}
+
+.container button {
+    height: 50px;
+    width: 100%;
+    background-color: #494eea;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    box-shadow: 2.5px 5px 10px rgba(0, 0, 0, 0.486);
+    letter-spacing: 0.05vw;
+    cursor: pointer;
+    margin: 20px 0;
+    font-size: 17px;
+    font-weight: 600;
+    transition: all 0.5s ease;
+}
+
+.container button:hover {
+    scale: 1.05;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.486);;
+}
+
+.imgBox {
+    max-height: 0;
+    width: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 1s ease-in;
+}
+
+.imgBox img {
+    width: 100%;
+    padding: 10px;
+}
+
+.imgBox.show-img {
+    max-height: 300px;
+    margin: 10px auto;
+    border: 1px solid #d1d1d1;
+}
+
+.error {
+    animation: shake 0.17s linear 10;
+}
+
+@keyframes shake{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(-2px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(2px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+

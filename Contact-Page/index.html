@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="shortcut icon" href="Favicon.png" type="image/x-icon">
+</head>
+<body>
+  <div class="contact-container">
+
+    <div class="contact-info">
+      <span class="tag">Contact</span>
+      <h2>Let's work together</h2>
+      <p class="subtitle">Have a project in mind? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+      
+      <div class="info-details">
+        <div class="info-item">
+          <div class="icon-box"><i class="fas fa-envelope"></i></div>
+          <div class="text-box">
+            <label>EMAIL</label>
+            <span>hello@example.com</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="icon-box"><i class="fas fa-phone-alt"></i></div>
+          <div class="text-box">
+            <label>PHONE</label>
+            <span>+1 (234) 567-890</span>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="icon-box"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="text-box">
+            <label>OFFICE</label>
+            <span>123 Street, San Francisco, CA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="social-links">
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+
+    <div class="contact-form-container">
+      <h2>Send a message</h2>
+      <form id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="input-group" id="firstNameGroup">
+            <label for="firstName">First name</label>
+            <input type="text" id="firstName" placeholder="John">
+            <small class="error-message">First name is required</small>
+          </div>
+          <div class="input-group" id="lastNameGroup">
+            <label for="lastName">Last name</label>
+            <input type="text" id="lastName" placeholder="Doe">
+            <small class="error-message">Last name is required</small>
+          </div>
+        </div>
+
+        <div class="input-group" id="emailGroup">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="john@example.com">
+          <small class="error-message">Please enter a valid email</small>
+        </div>
+
+        <div class="input-group" id="subjectGroup">
+          <label for="subject">Subject</label>
+          <select id="subject">
+            <option value="" disabled selected>Select a topic</option>
+            <option value="general">General Inquiry</option>
+            <option value="project">Project Proposal</option>
+            <option value="support">Technical Support</option>
+          </select>
+          <small class="error-message">Please select a topic</small>
+        </div>
+
+        <div class="input-group" id="messageGroup">
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" placeholder="Tell us about your project..."></textarea>
+          <small class="error-message">Message must be at least 10 characters long</small>
+        </div>
+
+        <button type="submit" id="submitBtn">Send Message <i class="fas fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

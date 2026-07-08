@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Kanban Favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1>Simple Kanban Board</h1>
+        <div class="board">
+
+            <!-- list 1 -->
+            <div class="list" id="list1">
+                <h2>To Do</h2>
+                <div class="card" draggable="true" id="card1">Wash dishes</div>
+                <div class="card" draggable="true" id="card2">Buy Grocries</div>
+            </div>
+
+            <!-- list 2 -->
+            <div class="list" id="list2">
+                <h2>In Progress</h2>
+            </div>
+
+            <!-- list 3 -->
+            <div class="list" id="list3">
+                <h2>Done</h2>
+                <div class="card" draggable="true" id="card3">Learn to code</div>
+            </div>
+        </div>
+
+        <input type="text" placeholder="Add new Task" class="input" id="taskInput"> <br>
+        <button class="new-cardbtn">Add new Task</button>
+        <button class="delete-cardbtn">Delete a task</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

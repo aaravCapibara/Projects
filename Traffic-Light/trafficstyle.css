@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 90vh;
+}
+
+.traffic {
+    height: 80vh;
+    width: 30vh;
+    background-color: #151515;
+    border: 2px double black;
+    border-radius: 5vh;
+}
+
+.L {
+    height: 25vh;
+    width: 25vh;
+    background-color: #333;
+    border: 2px double black;
+    border-radius: 50%;
+    margin: 5px 15px 10px 15px;
+    transition: all 0.5s ease-in-out;
+}
+
+.l1:hover {
+    background-color: #E63946;
+}
+
+.l2:hover {
+    background-color: #FFEB3B;
+}
+
+.l3:hover {
+    background-color: #2ECC71;
+}
+
+.l1:active {
+    background-color: #FF0000;
+}
+
+.l2:active {
+    background-color: #FFD700;
+}
+
+.l3:active {
+    background-color: #00FF00;
+}

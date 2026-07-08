@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NEON X·O</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Rajdhani:wght@400;600;700&display=swap"rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="Neon TTT Favicon.png" type="image/x-icon">
+</head>
+
+<body>
+  <!-- particles -->
+  <div class="particles" id="pts"></div>
+
+  <div class="wrap">
+    <!-- top bar -->
+    <div class="topbar">
+      <div class="logo">X · O</div>
+      <div class="controls">
+        <button class="icon-btn" id="soundBtn" title="Sound">🔇</button>
+        <button class="icon-btn" id="themeBtn" title="Theme">☀️</button>
+      </div>
+    </div>
+
+    <!-- mode tabs -->
+    <div class="tabs">
+      <button class="tab on" id="tabBot" onclick="setMode('bot')">⚡ VS BOT</button>
+      <button class="tab" id="tabPvp" onclick="setMode('pvp')">👥 2 PLAYERS</button>
+    </div>
+
+    <!-- difficulty (bot mode only) -->
+    <div class="diff-row" id="diffRow">
+      <span class="diff-label">DIFFICULTY</span>
+      <div class="diff-btns">
+        <button class="diff-btn" id="dEasy" onclick="setDiff('easy')">😴 EASY</button>
+        <button class="diff-btn" id="dMed" onclick="setDiff('med')">😤 MEDIUM</button>
+        <button class="diff-btn" id="dHard" onclick="setDiff('hard')">💀 HARD</button>
+      </div>
+    </div>
+
+    <!-- scoreboard -->
+    <div class="scores">
+      <div class="score-box active-x" id="boxX">
+        <div class="score-name" id="nameX">PLAYER X</div>
+        <div class="score-num" id="numX">0</div>
+      </div>
+      <div class="score-vs">VS</div>
+      <div class="score-box" id="boxO">
+        <div class="score-name" id="nameO">BOT O</div>
+        <div class="score-num" id="numO">0</div>
+      </div>
+    </div>
+
+    <!-- status -->
+    <div class="status-line sx" id="status">X'S TURN</div>
+
+    <!-- board -->
+    <div class="board" id="board">
+      <div class="cell" data-i="0"></div>
+      <div class="cell" data-i="1"></div>
+      <div class="cell" data-i="2"></div>
+      <div class="cell" data-i="3"></div>
+      <div class="cell" data-i="4"></div>
+      <div class="cell" data-i="5"></div>
+      <div class="cell" data-i="6"></div>
+      <div class="cell" data-i="7"></div>
+      <div class="cell" data-i="8"></div>
+    </div>
+
+    <!-- bot thinking -->
+    <div class="thinking" id="thinking">BOT IS THINKING…</div>
+
+    <!-- reset -->
+    <button class="reset-btn" onclick="resetRound()">[ NEW ROUND ]</button>
+
+  </div>
+
+  <!-- end-game modal -->
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal">
+      <div class="modal-icon" id="modalIcon">🤝</div>
+      <div class="modal-title" id="modalTitle">IT'S A DRAW!</div>
+      <div class="modal-sub" id="modalSub">Nobody wins this time</div>
+      <div class="modal-btns">
+        <button class="mbtn mbtn-play" onclick="modalPlayAgain()">▶ PLAY AGAIN</button>
+        <button class="mbtn mbtn-reset" onclick="modalResetAll()">↺ RESET ALL</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

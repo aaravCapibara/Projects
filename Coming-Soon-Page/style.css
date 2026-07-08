@@ -1,0 +1,139 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(images/background.png);
+    background-position: center;
+    background-size: cover;
+    padding: 0 8%;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo {
+    width: 150px;
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+.content {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 600px;
+}
+
+.content p {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.content h1 {
+    font-size: 64px;
+    font-weight: 600;
+    margin-top: 10px;
+    line-height: 70px;
+}
+
+.content h1 span {
+    color: #ff3333;
+}
+
+.content button {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    transition: 0.5s;
+}
+
+.launch-time {
+    display: flex;
+    margin-top: 50px;
+}
+
+.time-box {
+    flex-basis: 100px;
+    text-align: center;
+}
+
+.time-box p {
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 60px;
+}
+
+.time-box span {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.content button img {
+    width: 15px;
+    margin-left: 15px;
+}
+
+.content button:hover {
+    background: #fff;
+    color: #000;
+}
+
+.launch-time {
+    display: flex;
+    margin-top: 50px;
+}
+
+.launch-time div {
+    flex-basis: 100px;
+}
+
+.launch-time div p {
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 60px;
+}
+
+.launch-time div span {
+    font-size: 14px;
+    color: #ccc;
+}
+
+.rocket {
+    width: 250px;
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    animation: wave 4s linear infinite;
+}
+
+@keyframes wave {
+    0% {
+        bottom: 0;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        bottom: 105%;
+        opacity: 0.1;
+    }
+}

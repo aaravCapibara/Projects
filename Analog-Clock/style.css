@@ -1,0 +1,142 @@
+/* Universal Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+}
+
+/* Page Background and Layout Centering */
+body {
+    background-color: #111116;
+    color: #ffffff;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Main Clock Container */
+.clock {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background: #1e1f26;
+    border-radius: 50%;
+    border: 8px solid #282a35;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5), 
+    inset 0 5px 15px rgba(0,0,0,0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Central Pivot Point */
+.dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #ffffff;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+/* Positioning Clock Markings */
+.num {
+    position: absolute;
+    inset: 15px;
+    text-align: center;
+    transform: rotate(calc(30deg * var(--i)));
+}
+
+.num b {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #a0a5b5;
+    display: inline-block;
+    transform: rotate(calc(-30deg * var(--i)));
+}
+
+/* Common Hand Properties */
+.hand {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+
+.hand i {
+    position: absolute;
+    bottom: 50%;
+    border-radius: 6px;
+    transform-origin: bottom;
+}
+
+/* Hour Hand Specifics */
+#hour {
+    width: 300px;
+    height: 300px;
+}
+#hour i {
+    width: 6px;
+    height: 75px;
+    background: #ff3e3e;
+}
+
+/* Minute Hand Specifics */
+#min {
+    width: 320px;
+    height: 320px;
+}
+#min i {
+    width: 4px;
+    height: 100px;
+    background: #ffffff;
+}
+
+/* Second Hand Specifics */
+#sec {
+    width: 340px;
+    height: 340px;
+}
+#sec i {
+    width: 2px;
+    height: 120px;
+    background: #00ff66;
+}
+
+/* Digital Clock Container */
+#digital-clock {
+    position: absolute;
+    bottom: 75px;
+    background: #282a35;
+    padding: 6px 14px;
+    border-radius: 20px;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.5);
+}
+
+#time {
+    font-size: 1.1rem;
+    font-weight: 600;
+    font-family: Arial;
+    letter-spacing: 1px;
+    color: #ff3e3e;
+}
+
+/* Responsive Media Styling Adjustments */
+@media (max-width: 450px) {
+    .clock {
+        width: 75vw;
+        height: 75vw;
+    }
+    .num b {
+        font-size: 5vw;
+    }
+    #digital-clock {
+        bottom: 18%;
+    }
+    #time {
+        font-size: 4vw;
+    }
+}

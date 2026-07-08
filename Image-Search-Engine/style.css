@@ -1,0 +1,106 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background-color: #39297b;
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    margin: 100px auto 50px;
+    font-weight: 600;
+}
+
+form {
+    height: 80px;
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    background-color: #434989;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+}
+
+form input:-webkit-autofill,
+form input:-webkit-autofill:hover, 
+form input:-webkit-autofill:focus, 
+form input:-webkit-autofill:active {
+    -webkit-text-fill-color: #fff !important;
+    -webkit-box-shadow: 0 0 0px 1000px #434989 inset !important;
+    border-top-left-radius: 8px !important;
+    border-bottom-left-radius: 8px !important;
+    font-size: 18px !important;
+    font-family: 'Poppins', sans-serif !important;
+    border: 0 !important;
+    outline: 0 !important;
+    background-color: transparent !important;
+}
+
+form input {
+    height: 100%;
+    flex: 1;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 18px;
+    padding: 0 30px;
+}
+
+form input::placeholder {
+    color: #fff;
+    font-size: 20px;
+}
+
+form button {
+    height: 100%;
+    padding: 0 40px;
+    background-color: #ff3929;
+    color: #fff;
+    font-size: 18px;
+    border: 0;
+    outline: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    cursor: pointer;
+}
+
+#show-more-btn {
+    background-color: #ff3929;
+    color: #fff;
+    font-size: 18px;
+    border: 0;
+    outline: 0;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin: 10px auto 100px;
+    cursor: pointer;
+    display: none;
+}
+
+#search-result {
+    width: 80%;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+}
+
+#search-result img {
+    height: 230px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
