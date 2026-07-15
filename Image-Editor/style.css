@@ -28,7 +28,7 @@ body {
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
-.container.disable :where(.editor-panel, .reset-filter, .save-img, .save-options) {
+.container.disable :where(.editor-panel, .reset-filter, .save-img) {
     opacity: 0.6;
     pointer-events: none;
 }
@@ -133,12 +133,6 @@ body {
     width: 100%;
     object-fit: contain;
 }
-.controls {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-}
 
 .controls button {
     font-size: 14px;
@@ -147,7 +141,6 @@ body {
     background-color: #fff;
     padding: 11px 20px;
     border-radius: 3px;
-    white-space: nowrap;
 }
 
 .controls .reset-filter {
@@ -156,47 +149,13 @@ body {
     border: 1px solid #6c757d;
 }
 
-.controls .file-name {
-    flex: 1;
-    min-width: 120px;
-    height: 40px;
-    padding: 0 12px;
-    font-size: 14px;
-    color: #464646;
-    border: 1px solid #aaa;
-    border-radius: 3px;
-    outline: none;
-    transition: border-color 0.2s ease;
-}
-
-.controls .file-name:focus {
-    border-color: #5372f0;
-}
-
-.controls .file-type {
-    height: 40px;
-    padding: 0 10px;
-    font-size: 14px;
-    color: #6c757d;
-    background-color: #fff;
-    border: 1px solid #aaa;
-    border-radius: 3px;
-    cursor: pointer;
-    outline: none;
-    transition: border-color 0.2s ease;
-}
-
-.controls .file-type:hover,
-.controls .file-type:focus {
-    border-color: #5372f0;
-}
-
 .controls .choose-img {
     background: #6c757d;
     border: 1px solid #6c757d;
 }
 
 .controls .save-img {
+    margin-left: 5px;
     background: #5372f0;
     border: 1px solid #5372f0;
 }
@@ -218,11 +177,6 @@ body {
         width: 100%;
         margin: 0 0 15px;
     }
-
-    /* .wrapper .editor-panel,
-    .wrapper .preview-img {
-        width: 100%;
-    } */
 }
 
 @media screen and (max-width:500px) {

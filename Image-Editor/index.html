@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
-    <link rel="shortcut icon" href="Favicon.png" type="image/x-icon">
 </head>
 <body>
     <div class="container disable">
@@ -46,30 +45,11 @@
         </div>
         <div class="controls">
             <button class="reset-filter">Reset Filter</button>
-            <input type="text" class="file-name" placeholder="File name" value="image">
-            <select class="file-type">
-                <optgroup label="Supported (Export Works)">
-                    <option value="png">PNG</option>
-                    <option value="jpeg" selected>JPG</option>
-                    <option value="webp">WEBP</option>
-                </optgroup>
-                <optgroup label="Other Formats">
-                    <option value="bmp">BMP</option>
-                    <option value="gif">GIF</option>
-                    <option value="tiff">TIFF</option>
-                    <option value="ico">ICO</option>
-                    <option value="heic">HEIC</option>
-                    <option value="avif">AVIF</option>
-                    <option value="tga">TGA</option>
-                    <option value="svg">SVG</option>
-                    <option value="pcx">PCX</option>
-                    <option value="ppm">PPM</option>
-                    <option value="eps">EPS</option>
-                </optgroup>
-            </select>
-            <input type="file" class="file-input" accept="image/*" hidden>
-            <button class="choose-img">Choose Image</button>
-            <button class="save-img">Save Image</button>
+            <div class="row">
+                <input type="file" class="file-input" accept="image/*" hidden>
+                <button class="choose-img">Choose Image</button>
+                <button class="save-img">Save Image</button>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
