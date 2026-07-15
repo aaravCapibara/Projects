@@ -1,0 +1,241 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    min-height: 100vh;
+    background: #e3f2fd;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 850px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px 35px 35px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.container.disable :where(.editor-panel, .reset-filter, .save-img, .save-options) {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.container h2 {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.container .wrapper {
+    min-height: 355px;
+    margin: 20px 0;
+    display: flex;
+}
+
+.wrapper .editor-panel {
+    width: 280px;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.editor-panel .title{
+    display: block;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+.editor-panel .options, .controls{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.editor-panel button {
+    height: 40px;
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 8px;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #aaa;
+}
+
+.editor-panel button:hover {
+    background: #f5f5f5;
+}
+
+.editor-panel .filter button {
+    width: calc(100% / 2 - 4px);
+}
+
+.filter button.active {
+    color: #fff;
+    background-color: #5372f0;
+    border-color: #5372f0;
+}
+
+.filter .slider {
+    margin-top: 12px;
+}
+
+.filter .slider .filter-info {
+    font-size: 14px;
+    color: #464646;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter .slider input {
+    height: 5px;
+    width: 100%;
+    accent-color: #5672f0;
+}
+
+.editor-panel .rotate {
+    margin-top: 17px;
+}
+
+.rotate button:nth-child(3),
+.rotate button:nth-child(4) {
+    font-size: 18px;
+}
+
+.editor-panel .rotate button {
+    width: calc(100% / 4 - 3px);
+}
+
+.wrapper .preview-img {
+    margin-left: 20px;
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.preview-img img {
+    max-height: 335px;
+    max-width: 490px;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.controls button {
+    font-size: 14px;
+    cursor: pointer;
+    color: #fff;
+    background-color: #fff;
+    padding: 11px 20px;
+    border-radius: 3px;
+    white-space: nowrap;
+}
+
+.controls .reset-filter {
+    color: #6c757d;
+    text-transform: uppercase;
+    border: 1px solid #6c757d;
+}
+
+.controls .file-name {
+    flex: 1;
+    min-width: 120px;
+    height: 40px;
+    padding: 0 12px;
+    font-size: 14px;
+    color: #464646;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.controls .file-name:focus {
+    border-color: #5372f0;
+}
+
+.controls .file-type {
+    height: 40px;
+    padding: 0 10px;
+    font-size: 14px;
+    color: #6c757d;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.controls .file-type:hover,
+.controls .file-type:focus {
+    border-color: #5372f0;
+}
+
+.controls .choose-img {
+    background: #6c757d;
+    border: 1px solid #6c757d;
+}
+
+.controls .save-img {
+    background: #5372f0;
+    border: 1px solid #5372f0;
+}
+
+@media screen and (max-width:760px) {
+    .container {
+        padding: 25px;
+    }
+
+    .container .wrapper {
+        flex-wrap: wrap-reverse;
+    }
+
+    .wrapper .editor-panel {
+        width: 100%;
+    }
+
+    .wrapper .preview-img {
+        width: 100%;
+        margin: 0 0 15px;
+    }
+
+    /* .wrapper .editor-panel,
+    .wrapper .preview-img {
+        width: 100%;
+    } */
+}
+
+@media screen and (max-width:500px) {
+    .controls button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .controls .row {
+        width: 100%;
+    }
+
+    .controls .row .save-img {
+        margin-left: 0;
+    }
+}
